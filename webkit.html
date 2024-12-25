@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="menu">
+        <h2><a href="index.html">Ana Menü</a></h2>
+        <h2><a href="research.html">Araştırmalar</a></h2>
+        <h3><a href="history.html">&#x2022;&nbsp;&nbsp;Kronoloji</a></h3>
+        <h3><a href="webkit.html">&#x2022;&nbsp;&nbsp;Webkit Exploit</a></h3>
+        <h3><a href="kernel.html">&#x2022;&nbsp;&nbsp;Kernel Exploit</a></h3>
+        <h2><a href="guide.html">Rehber</a></h2>
+        <h2><a href="about.html">Hakkımda</a></h2>
+        <h2><a href="references.html">Kaynakça</a></h2>
+    </div>
+    <div class = "text">
+        <h1>Webkit Exploit</h1>
+        <p><br></p>
+         <p>Webkit iOS, Wii U, 3DS, PS Vita ve PS4 sistemlerindeki tarayıcılarda websayfalarını renderlayan açık kaynaklı bir yerleşik motordur. Doğal olarak Webkit'in de açıkları paylaşılır.</p>
+         <p>Playstation 4 1.76 sürümündeki tarayıcı da bir güvenlik açığı bulunduruyordu. Bu güvenlik açığı ilk olarak 2013 Eylülünde Apple Safari Tarayıcı'da keşfedildi ve paylaşıldı <a class="linktext"href="https://www.exploit-db.com/exploits/28081">(Heap Buffer Overflow)</a>.Daha sonra 2014'te <em>nas</em> ve <em>Proxima</em>, bu Apple Safari'deki exploit'i açığı kullanarak Playstation 4 portunu yayınladı. Ayrıca PoC(Proof of Concept) kodunu herkesle paylaşarak Plaaystation 4'ü hackleme işlemini başlattı.</p>
+         <p>Bu olay, hackerların Webkit'in okuyup yazabildiği her şeye keyfi olarak erişebilmesini sağladı. Bu sayede modüller dump edilebildi, stackteki(yığın bellek) adresleri değiştirilebildi(overwrite) ve döndürülebildi(return) ayrıca pointer register'ın(rip) talimatları kontrol edilebilir hale geldi. Bu olanaklar ROP(Return Oriented Programming) kullanmaya olanak tanıdı. </p>
+    </div>
+</body>
+</html>
