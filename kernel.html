@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="menu">
+        <h2><a href="index.html">Ana Menü</a></h2>
+        <h2><a href="research.html">Araştırmalar</a></h2>
+        <h3><a href="history.html">Kronoloji</a></h3>
+        <h3><a href="webkit.html">Webkit Exploit</a></h3>
+        <h3><a href="kernel.html">Kernel Exploit</a></h3>
+        <h2><a href="guide.html">Rehber</a></h2>
+        <h2><a href="about.html">Hakkımda</a></h2>
+        <h2><a href="references.html">Kaynakça</a></h2>
+
+        <img src="imgs/PlayStation_button_T.svg" alt="triangle" class="button">
+        <img src="imgs/PlayStation_button_C.svg" alt="circle" class="button">
+        <img src="imgs/PlayStation_button_X.svg" alt="cross" class="button">
+        <img src="imgs/PlayStation_button_S.svg" alt="square" class="button">
+    </div>
+    <div class = "content">
+        <h1>Kernel Exploit</h1>
+        <br>
+        <!- Bu bölümün ana kaynağı Kaynakça sayfasındaki makalelerdir. Terimleri ve teknikleri araştırarak makalenin giriş kısmını özetledim ve daha teknik detaylara girmedim. ->
+        <p>Bu yazıda ilk olarak CTurt'ün daha sonra SpecterDev'in kernel exploitleri ve bunların nasıl çalıştığına göz atalım.</p>
+        <p>Playstation 4 sisteminde <em>Data Execution Prevention(DEP)</em> isimli bellek koruma teknolojisi vardır. Bu çokca bellek gözünden sadece bazılarının üzerine yazabilir(overwrite) ve bazılarını çalıştırabilirsiniz(overwrite) ve kernel bu bellekleri farklı alanlarda kontrol eder. Ayrıca <em>ASLR(Adress Space Layout Randomization)</em> isminde bir diğer bellek koruma teknolojisi sistem her açıldığında kernelin üzerinde çalıştığı bellek alanının adresini değiştirir.</p>
+        <p>Bu nedenle herhangi bir belleğe payload gönderip çalışması beklenmez. Bu yüzden <em>ROP(Return Oriented Programming)</em> ve <em>gadgetlar</em> bu exploitin temelini oluşturur.</p>
+        <p>Gadgetlar genellikle tek komut ile çalışır ve bu komutlardan sonra <em>ret</em> ile yığındaki sıradaki adrese dönerler. Bu yığın kontrol edilebildiği için sıradaki gadget hacker tarafından belirlenebilir. Bu gadgetlar zinciri ile istenilen komutlar çalıştırılır. İşte <em>CTurt</em> tarafından yayınlanan 1.76 kernel exploiti böyle çalışır.</p>
+        <br>
+        <br>
+        <p>Bu kernel exploitin ardından 1.76'da 85 olan sistem çağrısı sayısı, 4.05'te 120'ye yükseldi ve bazı önemli sistem çağrıları kaldırıldı.</p>
+        <p>4.05'teki <em>Namedobj</em> kernel exploitinin temelinde <em>sys_namedobj_*</em> isimli sistem çağrısı ve <em>tip karışıklığı(type confusion)</em> açığı vardır.</p>
+        <p>Namedobj, bir isimi ve bazı sistem kaynaklarını işaret eden objedir. Eğer bir obje beklenmedik bir tipte olursa örneğin 0x1000 bekleyip 0x5000 olursa bir <em>type confusion</em> yani bir tip karışıklığı oluşur. Burada <em>sys_mdbg_service()</em> çağrısı bir nesneyi bozmaya ve alt 32-bitini başka bir pointera yazmaya olanak tanır. Bu pointerı ardından <em>sys_namedobj_delete()</em> çağrısı ile serbest bırakabilirsiniz. Bu durumda use-after-free durumu oluşur ve yığında(heap) sahte objeler oluşturup istediğiniz kodu çalıştırabilir hale gelirsiniz. 4.05 için <em>SpecterDev</em> tarafından yayınlanan kernel exploit bu şekilde çalışır.</p>
+        <p>Ardından <em>BPF(Berkeley Package Filter)</em> isimli ağ paket filtreleme aracı üzerindeki bir açıktan faydalanılarak 5.05 sürümü için kernel exploit yayınlandı. Sonraki dönemlerde bu birikimlerin üzerine koyarak daha hızlı bir şekilde topluluk yeni exploitler yayınladı.</p>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <a href="#top"><img src="imgs/PlayStation_Up_button.svg" alt="up" class="buttonup"></a><!-BU BUTON SAYFA BAŞINA DÖNER.->
+    </div>
+</body>
+</html>
+<!- Bu sayfada exploit sahiplerinin yazdığı makaleleri daha çok bu işlemin nasıl olduğunu öğrenmek amacıyla inceledim. Yapay zekayı kullanarak terimleri ve bu exploitlerin nasıl çalıştığını öğrenmeye çalıştım. Makalelerin içeriklerinden çok ayrılmadan kendi cümlelerimi yazdım.->
+<!- Yapay zekadan yardım aldım fakat direkt kopyalama yapmadım.->

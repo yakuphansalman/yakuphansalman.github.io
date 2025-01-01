@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="menu">
+        <h2><a href="index.html">Ana Menü</a></h2>
+        <h2><a href="research.html">Araştırmalar</a></h2>
+        <h3><a href="history.html">Kronoloji</a></h3>
+        <h3><a href="webkit.html">Webkit Exploit</a></h3>
+        <h3><a href="kernel.html">Kernel Exploit</a></h3>
+        <h2><a href="guide.html">Rehber</a></h2>
+        <h2><a href="about.html">Hakkımda</a></h2>
+        <h2><a href="references.html">Kaynakça</a></h2>
+
+        <img src="imgs/PlayStation_button_T.svg" alt="triangle" class="button">
+        <img src="imgs/PlayStation_button_C.svg" alt="circle" class="button">
+        <img src="imgs/PlayStation_button_X.svg" alt="cross" class="button">
+        <img src="imgs/PlayStation_button_S.svg" alt="square" class="button">
+    </div>
+    <div class = "content">
+        <!- Bu kronoloji, kendim bir şey katamayacağımdan bir alıntının özeti halinde yazıldı.https://consolemods.org/wiki/PS4:Scene_History -> 
+        <h1>Kronoloji</h1>
+
+        <h4>2013</h4>
+        <u>
+            <li>Playstation 4 çıkış yaptı.</li>
+        </u>
+        <h4>2014</h4>
+        <u>
+            <li>2.00 Güncellemesi yayındandı ve 1.76'da bulunan kernel exploit yamandı.</li>
+        </u>
+        <h4>2015</h4>
+        <u>
+            <li>Nas ve Proxima bir webkit exploit getiriyor.</li>
+            <li>CTurt 1.76'da bir kernel exploit olduğunu onaylıyor.</li>
+            <li>Cturt, root'u ve RAM'deki processleri gösteriyor.</li>
+            <li>Cturt, kernel exploit'in <a class="linktext"href="https://web.archive.org/web/20160324155758/http://cturt.github.io/ps4.html">teknik ayrıntılarını</a> yayınladı.</li>
+            <li>Linux dosyaları ve MS-DOS içeren devkit dosya dump görünütleri ortaya çıktı ve Necoxao devkit dosya sistemi yayınladı.(Beta Firmware 0.8.2)</li>
+            <li>Fail0verflow Linux çalışan bir PS4'te Pokemon demosu çalıştırdı.</li>
+        </u>
+        <h4>2016</h4>
+        <u>
+            <li>Fail0verflow Linux kernel'ine bir fork yayınlıyor ve 3D acceleration sürücülerini çalıştırıyor.</li>
+            <li>PS4 Elf Loader ve diğer araçlar yayınlandı.</li>
+            <li>CTurt ve qwertyyoruiop yeni kernel exploit detaylarını yayınladı.</li>
+            <li>Geliştiricilerin Github hesapları ele geçirildi. Bad IRET exploit kaynak kodu sızdırıldı.</li>
+            <li>Fail0verflow OrbisOS üzerinden Linux kernel yükleyen bir PS4 kexec kod yayınladı.</li>
+            <li>Zer0xFF 2.03 ve altına uygulanabilen kernel exploit kaynak kodu yayınladı.</li>
+            <li>Fire30 2.03 ve altı için bir webkit exploit yayınladı.</li>
+            <li>Flatz debug ayarları akti feden bir kod yayınladı.</li>
+            <li>Cturt yeni kernel exploitin 3.50 ve üstünü etkileyebileceğini söyledi ve detayları paylaştı. <a class="linktext" href="https://web.archive.org/web/20160519111309/http://cturt.github.io/SETFKEY.html">SETFKEY</a> ve <a class="linktext" href="https://web.archive.org/web/20160519111309/http://cturt.github.io/SETFKEY.html">sendmsg</a></li>
+            <li>Qwertyouriop 3.50 için webkit exploit bilgilerini paylaştı.</li>
+            <li>Hunter128 3.50 webkit exploit'i için bir PoC yayınladı.</li>
+            <li>Playstation 3.55 güncelleştirmesini yayınladı.</li>
+            <li>PS Vita Webkit Exploit'inin Playstation 4 3.55 versiyonunda çalışabildiği görüldü.</li>
+            <li>Playstation 4 için çeşitli araçlar ve uygulamalar geliştirildi.</li>
+            <li>4.00 sürümü yayınlandı. 3.55 Webkit açığı yamandı.</li>
+        </u>
+        <h4>2017</h4>
+        <u>
+            <li>Qwertyouriop 4.07 için bir Webkit, 4.06 için Kernel Exploit keşfetti sadece Webkit'i yayınladı. Webkit Exploit 4.50 sürümüyle yamandı ama Kernel Exploit 4.50'ye uygulanabildi. </li>
+            <li>4.55 sürümü yayınlandı.</li>
+            <li>Qwertyoruiop 4.50 için tam bir exploit yayınladı.</li>
+            <li>5.00 sürümü yayınlandı.</li>
+            <li><em>Fail0verflow</em> 4.05 için <em>Namedobj</em> adlı Kernel Exploit yayınladı ve bunun hakkında bir <a class="linktext" href="https://fail0verflow.com/blog/2017/ps4-namedobj-exploit/">makale</a> yazdı.</li>
+            <li><em>SpecterDev</em> 4.05 için jailbreak yayınladı ve bunun hakkında <a class="linktext" href="https://github.com/Cryptogenic/Exploit-Writeups/blob/master/PS4/%22NamedObj%22%204.05%20Kernel%20Exploit%20Writeup.md">makale</a> yazdı.</li>
+        </u>
+        <h4><b>2018</b></h4>
+        <u>
+            <li><em>Qwertyoruiop</em> 5.05 sürümünde çalışan <em>bpfwrite</em>(Berkeley Pocket Filter) kernel exploit hakkında bir <a class="linktext" href="https://x.com/qwertyoruiopz/status/958931104840536065">ipucu</a> paylaştı.</li>
+            <li><em>Qwertyoruiop</em> 4.55 için userland exploit haricinde bir kernel exploit yayınladı.</li>
+            <li><em>SpecterDev</em>, <em>qwertyoruiop</em> ve <em>flatz</em> ; 4.55 Kernel exploit ve 5.03 Webkit exploit'i kullanarak 4.55 sürümü için bir jailbreak yayınladı.</li>
+            <li><em>ALEXZZZ9</em> 5.01 için Webkit exploit'i ve bunun konseptini yayınladı. </li>
+            <li><em>SpecterDev</em> 5.03 Webkit exploit kullanılarak yayınlanan 4.55 jailbreak için bir <a class="linktext" href="https://github.com/Cryptogenic/Exploit-Writeups/blob/master/WebKit/setAttributeNodeNS%20UAF%20Write-up.md">makale</a> yazdı. Ardından 4.55 kernel exploit için de bir <a class= "linktext" href="https://github.com/Cryptogenic/Exploit-Writeups/blob/master/FreeBSD/PS4%204.55%20BPF%20Race%20Condition%20Kernel%20Exploit%20Writeup.md">makale</a> yazdı.</li>
+            <li><em>SpecterDev</em> 5.05/5.07 için bir <a class="linktext" href="https://x.com/SpecterDev/status/1000825836079955968">kernel exploit</a> yayınladı. Ayrıca <em>qwertyoruiop</em> 5.01 için kendi <a class="linktext" href="https://x.com/qwertyoruiopz/status/1001140663138779138">kernel exploit'ini</a> paylaştı.</li>
+        </u>
+        <h4>2020</h4>
+        <u>
+            <li>Sony, Playstation 4 için bug başına 100 ila 50 bin dolar verdiği bir <a class="linktext" href="https://blog.playstation.com/2020/06/24/announcing-the-playstation-bug-bounty-program/">ödül programını</a> duyurdu.</li>
+            <li><em>Thefl0w</em> 7.02 sürümü için bir <a class = "linktext" href="https://x.com/theflow0/status/1280224554393178122">kernel exploit</a> yayınladı ve Sony'den 10 bin dolar ödül kazandı.</li>
+            <li><em>Sleirsgoevy</em> 6.72 sürümü için <a class = "linktext" href="https://github.com/sleirsgoevy/ps4jb">jailbreak</a> yayınladı.</li>
+            <li><em>Zecoxao</em> 6.72 oyunlarını 5.05'te çalıştıracak bir backport geliştirdi ve <em>Flatz</em> bu işlem için <a class="linktext" href="https://twitter.com/flat_z/status/1284499782946390019">script</a> yayınladı.</li>
+        </u>
+        <h4>2021</h4>
+        <u>
+            <li><em>Thefl0w</em> yeni bir <a class="linktext" href="https://hackerone.com/reports/943231">kernel exploit</a> ortaya çıkardı. Bunun üzerine <em>Sleirsgoevy</em> bu kaynağı uygulayarak tam bir kernel exploit yayınladı.</li>
+        </u>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <a href="#top"><img src="imgs/PlayStation_Up_button.svg" alt="up" class="buttonup"></a><!-BU BUTON SAYFA BAŞINA DÖNER.->
+
+    </div>
+</body>
+</html>

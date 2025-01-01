@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="menu">
+        <h2><a href="index.html">Ana Menü</a></h2>
+        <h2><a href="research.html">Araştırmalar</a></h2>
+        <h2><a href="guide.html">Rehber</a></h2>
+        <h2><a href="about.html">Hakkımda</a></h2>
+        <h2><a href="references.html">Kaynakça</a></h2>
+        <img src="imgs/PlayStation_button_T.svg" alt="triangle" class="button">
+        <img src="imgs/PlayStation_button_C.svg" alt="circle" class="button">
+        <img src="imgs/PlayStation_button_X.svg" alt="cross" class="button">
+        <img src="imgs/PlayStation_button_S.svg" alt="square" class="button">
+    </div>
+    <!- Bu sayfada çoğunlukla bildiklerim üzerinden bir rehber yaptım. ->
+    <div class = "content">
+        <h1>Rehber</h1>
+        </br>
+            <h2>Uyarı!</h2>
+            <p><em>Bu kısımda alacağınız risk ve olası durumda konsolunuza gelecek zarar tamamen sizin sorumluluğunuzdadır.</em></p>
+            <p><em>Bu işlem cihazınızı garanti kapsamından çıkarabilir.</em></p>
+            <h2>Korsancılık</h2>
+            <p>Bu işlem sonucunda oyunları korsan oynayabilirsiniz fakat bu emeğe saygısızlıktır bu nedenle oyunları her zaman <b>satın alın</b>! Bu amaç haricinde biz <em>Debug Menu</em> elementlerini gözlemleyeceğiz.</p>
+            <h2>Nasıl Yapılır?</h2>
+            <p>Eğer elinizde bir Playstation 4 varsa ve sürümü 11.00 ve altındaysa <em>jailbreak</em> yapabilir ve <em>Debug Menu'ya</em> erişebilirsiniz.</p>
+            <br>
+            <p>İlk olarak konsolunuzun sürümünü öğrenmeli ve bu sürümün üzerindeki en kararlı sürüme güncellemelisiniz. Bunun için "Ayarlar/Sistem/Sistem Bilgileri/Sistem Yazılımı" kısmına gidebilirsiniz.</p>
+            <u>
+                <li>1.76</li>
+                <li>4.05</li>
+                <li>4.55</li>
+                <li>5.05</li>
+                <li>6.72</li>
+                <li>7.02</li>
+                <li>7.50</li>
+                <li>9.00</li>
+                <li>11.00</li>
+            </u>
+            <p>Listedeki sürümlerden birine güncelledikten sonra Sony sunucularını bloklamak için DNS adresi değiştirmeliyiz. Bu işlemdeki amaç güncelleme almaktan kaçınmak çünkü Playstation 4 arka planda sunucudan yeni bir güncelleme alırsa indirebilir ve bu işlemi yapamayız. Bunun için "Ayarlar/Ağ/İnternet Bağlantısını Ayarla/Wifi-LAN/Özel/"Ağ Adı"/"Ağ Şifresi"/DNS Ayarları" Manuel olarak girmeliyiz.</p>
+            <u>
+                <li>Birincil DNS:165.227.83.145</li>
+                <li>İkincil DNS:192.241.221.79</li>
+            </u>
+            <p>Bu işlem sonucunda eğer "Ayarlar/Kullanım Kılavuzu"na girerseniz sizi bir Exploit Host karşılar. Dilerseniz farklı bir host ile devam edebilirsiniz. </p>
+            <img class="responsive" src="imgs/host0.png" alt="host0.png">
+            <p>Ardından <em>kategorilerden</em> kendinize uygun sürümü seçebilirsiniz. Ya da görüldüğü gibi bir Linux çalıştırabilirsiniz.</p>
+            <img class="responsive" src="imgs/host1.png" alt="host1.png">
+            <p>Burada bu jailbreak ile çalışan çeşitli araçlar karşımıza çıkıyor. Bunlardan birkaçını gözden geçirelim.</p>
+            <u>
+                <li>App, Kernel, Memory Dumper ile herhangi bir uygulamanın dosyaları, kernel veya bellek; bir depolama aygıtına kopyalanır.</li>
+                <li>Bin Loader ile kendi payload'ınızı çalıştırabilirsiniz.</li>
+                <li>Disable Updates, sistem güncellemesini bloklar ve bunu bir kukla(dummy) dizin oluşturarak yapar.</li>
+                <li>FTP ile ağ üzerindeki farklı cihazlarla dosya transferi yapılabilir.</li>
+                <li>REN, normalde bu işlem sonucunda çalışmayan <em>Remote Play</em> özelliğini çalışır hale getirir.</li>
+            </u>
+            <p><em>HEN</em>(Homebrew Enabler) jailbreak işlemi için seçilir. Daha güncel ve modifiye edilmiş olan GoldHEN önerilir. Ayrıca yukarıda sıralanan araçları kullanmak için HEN çalıştırılmalıdır. Homebrew Enabler seçildikten sonra "out of memory" hatası alınabilir, görmezden gelip sayfayı yeniden yüklemeliyiz. Bu işlemin ardından <em>Ayarlar</em> menüsünde <em>Debug Settings'i</em> görebiliriz. Eğer GoldHEN uygulandıysa <em>Ayarlar/GoldHEN</em> içinde bulunur.</p>
+            <img class="responsive" src="imgs/ds0.png" alt="Debug Settings">
+            <br>
+            <img class="responsive" src="imgs/ds1.png" alt="Debug Settings">
+            <p>Görüldüğü üzere sistemin izin vermediği araçlara erişilebilir. Burada gözükmeyen bazı araçlarda diğer versiyonlarda eklenmiştir.</p>
+            <p>Burada gözükmeyen bir diğer araç Package Installer, <em>exFAT</em> formatında bir depolama aygıtından <em>.pkg</em> uzantılı oyun veya uygulamaları yükler. İşte bu araç <b>korsan oyun oynama</b> imkanını tanır. Fakat bunun haricinde bir çok araç mevcuttur.</p>
+            
+            <u>
+                <li>SaveData, geliştirme sırasında kayıt verilerinin yönetimini sağlar.</li>
+                <li>Overlay APP_HOME On app0, geliştirme aşamasındaki bir uygulama veya oyunun <em>app0</em> üzerinden başlatılmasını sağlar.</li>
+                <li>Export Error/Notification History to USB Mass Storage, hata geçmişi listesini USB depolama aygıtına kaydeder.</li>
+                <li>Region Settings, farklı sistem dillerini ve saat dilimlerini test etmek için kullanılır.</li>
+                <li>Debug NPDRM Clock, lisansların çeşitli senaryolarda test edilmesini sağlar.</li>
+                <li>Display Title ID on Home Screen, ana ekranda içerik simgelerinde başlık kimliğini gösterir.</li>
+                <li>Skip Warning Screen after Improper Shutdown, yanlış kapatma sonrası uyarı ekranını atlar.</li>
+                <li>Switch User Group, farklı bölge ve yaş ayarlarını test etmek için kullanıcı grubu değiştirir.</li>
+                <li>Display Account Information, PSN hesap bilgilerini giriş ekranında görüntüler.</li>
+                <li>Ve daha fazlası...</li>
+            </u>
+
+            <p>Ayrıca burada gözükmese de root dizininde okuma ve yazma işlemi yapılabilir. Bunun için çeşitli araçlar geliştirilmiştir. Örneğin <em>Lapy</em> tarafından geliştirilen PS4-Xplorer aracı ile ya da FTP ile bu işlem yapılır. </p>
+
+            
+            <a href="#top"><img src="imgs/PlayStation_Up_button.svg" alt="up" class="buttonup"></a><!-BU BUTON SAYFA BAŞINA DÖNER.->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+    </div>
+</body>
+</html>

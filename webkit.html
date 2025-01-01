@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="menu">
+        <h2><a href="index.html">Ana Menü</a></h2>
+        <h2><a href="research.html">Araştırmalar</a></h2>
+            <h3><a href="history.html">Kronoloji</a></h3>
+            <h3><a href="webkit.html">Webkit Exploit</a></h3>
+            <h3><a href="kernel.html">Kernel Exploit</a></h3>
+        <h2><a href="guide.html">Rehber</a></h2>
+        <h2><a href="about.html">Hakkımda</a></h2>
+        <h2><a href="references.html">Kaynakça</a></h2>
+
+        <img src="imgs/PlayStation_button_T.svg" alt="triangle" class="button">
+        <img src="imgs/PlayStation_button_C.svg" alt="circle" class="button">
+        <img src="imgs/PlayStation_button_X.svg" alt="cross" class="button">
+        <img src="imgs/PlayStation_button_S.svg" alt="square" class="button">
+    </div>
+    <div class = "content">
+        <!- Burada Cturt'ün 1.76 exploit için yazdığı makaleden alıntılar yaptım. Teknik terimleri ve bu işlemin nasıl çalıştığını araştırdım fakat bir öğrenci olduğum için kesin cümleler kullanmaktan kaçındım.->
+        <h1>Webkit Exploit</h1>
+        <br>
+        <p>Webkit iOS, Wii U, 3DS, PS Vita ve PS4 sistemlerindeki tarayıcılarda websayfalarını renderlayan açık kaynaklı bir yerleşik motordur. Doğal olarak Webkit'in de açıkları paylaşılır.</p>
+        <p>2013 Eylülünde Apple Safari Tarayıcısında bir güvenlik açığı tespit edildi<a class="linktext"href="https://www.exploit-db.com/exploits/28081">(Heap Buffer Overflow)</a>. Apple Safari tarayıcı da Webkit kullandığından daha sonra <em>nas</em> ve <em>Proxima</em> isimli iki hacker bu exploit'in Playstation 4 Portunu yayınladı. PoC(Proof of Concept) kodunu da herkesle paylaşarak Playstation 4 konsolunu hackleme işlemini başlattı.</p>
+        <p>Bu olay, hackerların Webkit'in okuyup yazabildiği her şeye keyfi olarak erişebilmesini sağladı. Bu sayede modüller dump edilebildi, stackteki(yığın bellek) adresleri değiştirilebildi(overwrite) ve döndürülebildi(return) ayrıca pointer register'ın(rip) talimatları kontrol edilebilir hale geldi. Bu olanaklar ROP(Return Oriented Programming) kullanmaya olanak tanıdı. </p>
+        <img  src="imgs/webkit-example.png" alt="1.76 sürümündeki Webkit Playground" class="responsive">
+        <p>Resimde bir Webkit Exploit'in Playground'ının(Oyun Alanının) yapabildiklerini görüyorsunuz. Bu exploit ile Linux kurabilir, <em>Syscall</em>  komutu sayesinde kernel ile iletişim kurabilir, <em>Filesystem'e</em> erişebilir, yüklü bir modülü dumplayabilir veya daha fazlasını yapabilirsiniz. </p>
+         
+
+        <a href="#top"><img src="imgs/PlayStation_Up_button.svg" alt="up" class="buttonup"></a><!-BU BUTON SAYFA BAŞINA DÖNER.->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
+<!- Bu sayfada exploit sahiplerinin yazdığı makaleleri daha çok bu işlemin nasıl olduğunu öğrenmek amacıyla inceledim. Yapay zekayı kullanarak terimleri ve bu exploitlerin nasıl çalıştığını öğrenmeye çalıştım. Makalelerin içeriklerinden çok ayrılmadan kendi cümlelerimi yazdım.->
+<!- Yapay zekadan yardım aldım fakat direkt kopyalama yapmadım.->
