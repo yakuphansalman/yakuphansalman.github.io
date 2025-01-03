@@ -26,8 +26,10 @@
         <!- Burada Cturt'ün 1.76 exploit için yazdığı makaleden alıntılar yaptım. Teknik terimleri ve bu işlemin nasıl çalıştığını araştırdım fakat bir öğrenci olduğum için kesin cümleler kullanmaktan kaçındım.->
         <h1>Webkit Exploit</h1>
         <br>
+        <p>Playstation 4, derste anlatıldığı gibi bir çok <a class="linktext" href="https://www.playstation.com/en-us/oss/ps4/">açık kaynaklı araç ve yazılım</a> kullanır. Bunlardan biri de Webkit'tir.</p>
         <p>Webkit iOS, Wii U, 3DS, PS Vita ve PS4 sistemlerindeki tarayıcılarda websayfalarını renderlayan açık kaynaklı bir yerleşik motordur. Doğal olarak Webkit'in de açıkları paylaşılır.</p>
         <p>2013 Eylülünde Apple Safari Tarayıcısında bir güvenlik açığı tespit edildi<a class="linktext"href="https://www.exploit-db.com/exploits/28081">(Heap Buffer Overflow)</a>. Apple Safari tarayıcı da Webkit kullandığından daha sonra <em>nas</em> ve <em>Proxima</em> isimli iki hacker bu exploit'in Playstation 4 Portunu yayınladı. PoC(Proof of Concept) kodunu da herkesle paylaşarak Playstation 4 konsolunu hackleme işlemini başlattı.</p>
+        <img src="imgs/1.76-webkit.webp" alt="nas ve Proxima'nın Webkit portu" class="responsive">
         <p>Bu olay, hackerların Webkit'in okuyup yazabildiği her şeye keyfi olarak erişebilmesini sağladı. Bu sayede modüller dump edilebildi, stackteki(yığın bellek) adresleri değiştirilebildi(overwrite) ve döndürülebildi(return) ayrıca pointer register'ın(rip) talimatları kontrol edilebilir hale geldi. Bu olanaklar ROP(Return Oriented Programming) kullanmaya olanak tanıdı. </p>
         <img  src="imgs/webkit-example.png" alt="1.76 sürümündeki Webkit Playground" class="responsive">
         <p>Resimde bir Webkit Exploit'in Playground'ının(Oyun Alanının) yapabildiklerini görüyorsunuz. Bu exploit ile Linux kurabilir, <em>Syscall</em>  komutu sayesinde kernel ile iletişim kurabilir, <em>Filesystem'e</em> erişebilir, yüklü bir modülü dumplayabilir veya daha fazlasını yapabilirsiniz. </p>
